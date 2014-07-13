@@ -3,11 +3,11 @@
 Simple interface to Unix getrlimit and setrlimit!!
 For further reference see [[http://man7.org/linux/man-pages/man2/setrlimit.2.html][man rlimit(2)]].
 
-#+BEGIN_QUOTE
-function /rlimit/ resource
-function /(setf rlimit)/ resource size
-#+END_QUOTE
+function /rlimit/ resource -> current, max
 
+function /(setf rlimit)/ resource size -> size-or-error
+
+/size/ should be an integer.
 /resource/ should be one of:
 
 + /+RLIMIT-ADRESS-SPACE+/ or /+RLIMIT-AS+/
