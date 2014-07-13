@@ -19,7 +19,9 @@
       (+einval+ :einval)
       (+eperm+ :eperm)
       (+esrch+ :esrch)
-      (t (convert-from-foreign rlimit '(:struct rlimit))))))
+      (t
+       (with-foreign-slots ((max current) rlimit (:struct rlimit))
+         (values current max))))))
 
 (defun set-rlimit (resource size)
   (with-foreign-object (rlimit '(:struct rlimit))
