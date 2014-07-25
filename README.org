@@ -10,7 +10,7 @@ function /(setf rlimit)/ resource size -> size-or-error
 /size/ should be an integer.
 /resource/ should be one of:
 
-+ /+RLIMIT-ADRESS-SPACE+/ or /+RLIMIT-AS+/
++ /+RLIMIT-ADDRESS-SPACE+/ or /+RLIMIT-AS+/
 + /+RLIMIT-CORE+/
 + /+RLIMIT-CPU+/ or /+RLIMIT-CPU-TIME+/
 + /+RLIMIT-DATA+/

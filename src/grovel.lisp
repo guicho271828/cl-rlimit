@@ -9,7 +9,7 @@
 (constant (+rlimit-infinity+ "RLIM_INFINITY"))
 (progn
   (constant (+rlimit-as+ "RLIMIT_AS"))
-  (constant (+rlimit-adress-space+ "RLIMIT_AS")))
+  (constant (+rlimit-address-space+ "RLIMIT_AS")))
 (constant (+rlimit-core+ "RLIMIT_CORE"))
 (progn
   (constant (+rlimit-cpu-time+ "RLIMIT_CPU"))
