@@ -1,7 +1,7 @@
 (defpackage :cl-rlimit
   (:use :cl :cffi)
   (:export :rlimit
-           :+RLIMIT-ADRESS-SPACE+
+           :+RLIMIT-ADDRESS-SPACE+
            :+RLIMIT-AS+
            :+RLIMIT-CORE+
            :+RLIMIT-CPU+
