@@ -21,7 +21,12 @@
       (+esrch+ :esrch)
       (t
        (with-foreign-slots ((max current) rlimit (:struct rlimit))
-         (values current max))))))
+         (values (if (= current +rlim-infinity+)
+                     :infinity
+                     current)
+                 (if (= max +rlim-infinity+)
+                     :infinity
+                     max)))))))
 
 (defun set-rlimit (resource size)
   (with-foreign-object (rlimit '(:struct rlimit))

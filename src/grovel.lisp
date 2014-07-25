@@ -6,7 +6,7 @@
 
 (include "sys/time.h" "sys/resource.h")
 
-(constant (+rlimit-infinity+ "RLIM_INFINITY"))
+(constant (+rlim-infinity+ "RLIM_INFINITY"))
 (progn
   (constant (+rlimit-as+ "RLIMIT_AS"))
   (constant (+rlimit-address-space+ "RLIMIT_AS")))
