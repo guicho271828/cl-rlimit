@@ -1,5 +1,6 @@
 (defsystem cl-rlimit
-  :author "guicho"
+  :author "Masataro Asai"
+  :license "LLGPL"
   :defsystem-depends-on (:cffi-grovel)
   :depends-on (:cffi)
   :components
