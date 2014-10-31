@@ -10,27 +10,27 @@ function /(setf rlimit)/ resource size -> size-or-error
 /size/ should be an integer.
 /resource/ should be one of:
 
-+ /+RLIMIT-ADDRESS-SPACE+/ or /+RLIMIT-AS+/
-+ /+RLIMIT-CORE+/
-+ /+RLIMIT-CPU+/ or /+RLIMIT-CPU-TIME+/
-+ /+RLIMIT-DATA+/
-+ /+RLIMIT-FILE-SIZE+/ or /+RLIMIT-FSIZE+/
-+ /+RLIMIT-MEMLOCK+/
-+ /+RLIMIT-MSGQUEUE+/
-+ /+RLIMIT-NICE+/
-+ /+RLIMIT-NOFILE+/ or + /+RLIMIT-NUMBER-OF-FILES+/
-+ /+RLIMIT-NPROC+/ or /+RLIMIT-NUMBER-OF-PROCESSES+/
-+ /+RLIMIT-OFILE+/
-+ /+RLIMIT-REAL-TIME-PRIORITY+/
-+ /+RLIMIT-RSS+/
-+ /+RLIMIT-RTPRIO+/
-+ /+RLIMIT-SIGPENDING+/
-+ /+RLIMIT-STACK+/
++ =+RLIMIT-ADDRESS-SPACE+= or =+RLIMIT-AS+=
++ =+RLIMIT-CORE+=
++ =+RLIMIT-CPU+= or =+RLIMIT-CPU-TIME+=
++ =+RLIMIT-DATA+=
++ =+RLIMIT-FILE-SIZE+= or =+RLIMIT-FSIZE+=
++ =+RLIMIT-MEMLOCK+=
++ =+RLIMIT-MSGQUEUE+=
++ =+RLIMIT-NICE+=
++ =+RLIMIT-NOFILE+= or + =+RLIMIT-NUMBER-OF-FILES+=
++ =+RLIMIT-NPROC+= or =+RLIMIT-NUMBER-OF-PROCESSES+=
++ =+RLIMIT-OFILE+=
++ =+RLIMIT-REAL-TIME-PRIORITY+=
++ =+RLIMIT-RSS+=
++ =+RLIMIT-RTPRIO+=
++ =+RLIMIT-SIGPENDING+=
++ =+RLIMIT-STACK+=
 
 some of these are synonyms.
 To set a limit as infinity, use
 
-+ /+RLIMIT-INFINITY+/
++ =+RLIMIT-INFINITY+=
 
 
 If the values to be set are inappropriate (exceeds the current limit),
