@@ -1,6 +1,6 @@
 
 
-Simple interface to Unix getrlimit and setrlimit!!
+Simple interface to Unix getrlimit and setrlimit.
 For further reference see [[http://man7.org/linux/man-pages/man2/setrlimit.2.html][man rlimit(2)]].
 
 function /rlimit/ resource -> current, max
@@ -33,3 +33,11 @@ To set a limit as infinity, use
 + /+RLIMIT-INFINITY+/
 
 
+If the values to be set are inappropriate (exceeds the current limit),
+it returns the appropriate errors like =+EFAULT+,+EINVAL+,+EPERM+,+ESRCH+=.
+
++ TODO: signal a lisp condition instread of error integers
++ TODO: further support for =struct rusage=
++ TODO: integration to OSICAT-POSIX
+
+Author: Masataro Asai guicho2.71828-at-gmail-dot-com
