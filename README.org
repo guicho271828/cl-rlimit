@@ -1,10 +1,11 @@
 
 
 Simple interface to Unix getrlimit and setrlimit.
-For further reference see [[http://man7.org/linux/man-pages/man2/setrlimit.2.html][man rlimit(2)]].
+For further reference see [[http://man7.org/linux/man-pages/man2/setrlimit.2.html][man getrlimit(2)]] and [[http://man7.org/linux/man-pages/man2/getrusage.2.html][man getrusage(2)]].
+
+* rlimit, (setf rlimit)
 
 function /rlimit/ resource -> current, max
-
 function /(setf rlimit)/ resource size -> size-or-error
 
 /size/ should be an integer.
@@ -30,14 +31,41 @@ function /(setf rlimit)/ resource size -> size-or-error
 some of these are synonyms.
 To set a limit as infinity, use
 
-+ =+RLIMIT-INFINITY+=
-
++ =+RLIM-INFINITY+=
 
 If the values to be set are inappropriate (exceeds the current limit),
 it returns the appropriate errors like =+EFAULT+,+EINVAL+,+EPERM+,+ESRCH+=.
 
+* =(rusage &optional (who +RUSAGE-SELF+))=
+
+This takes one of =+RUSAGE-SELF+=, =+RUSAGE-CHILDREN+=, =+RUSAGE-THREAD=
+and returns a lisp structure =rusage=.  =utime= and =stime= is converted
+to a full microsecond (combining tv_sec and tv_usec).
+
+#+BEGIN_SRC lisp
+(defstruct rusage
+  (utime 0 :type integer)
+  (stime 0 :type integer)
+  (maxrss 0 :type integer)
+  (ixrss 0 :type integer)    ;x on linux
+  (idrss 0 :type integer)    ;x on linux
+  (isrss 0 :type integer)    ;x on linux
+  (minflt 0 :type integer)
+  (majflt 0 :type integer)
+  (nswap 0 :type integer)    ;x on linux
+  (inblock 0 :type integer)
+  (oublock 0 :type integer)
+  (msgsnd 0 :type integer)   ;x on linux
+  (msgrcv 0 :type integer)   ;x on linux
+  (nsignals 0 :type integer) ;x on linux
+  (nvcsw 0 :type integer)
+  (nivcsw 0 :type integer))
+#+END_SRC
+
+* TODOs
+
++ DONE: further support for =struct rusage=
 + TODO: signal a lisp condition instread of error integers
-+ TODO: further support for =struct rusage=
 + TODO: integration to OSICAT-POSIX
 
 Author: Masataro Asai guicho2.71828-at-gmail-dot-com
