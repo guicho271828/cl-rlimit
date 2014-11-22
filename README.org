@@ -5,8 +5,9 @@ For further reference see [[http://man7.org/linux/man-pages/man2/setrlimit.2.htm
 
 * rlimit, (setf rlimit)
 
-function /rlimit/ resource -> current, max
-function /(setf rlimit)/ resource size -> size-or-error
+*function* /rlimit/ resource -> current, max
+
+*function* /(setf rlimit)/ resource size -> size-or-error
 
 /size/ should be an integer.
 /resource/ should be one of:
