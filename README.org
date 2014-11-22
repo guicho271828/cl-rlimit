@@ -37,7 +37,7 @@ To set a limit as infinity, use
 If the values to be set are inappropriate (exceeds the current limit),
 it returns the appropriate errors like =+EFAULT+,+EINVAL+,+EPERM+,+ESRCH+=.
 
-* =(rusage &optional (who +RUSAGE-SELF+))=
+* (rusage &optional (who =+RUSAGE-SELF+=))
 
 This takes one of =+RUSAGE-SELF+=, =+RUSAGE-CHILDREN+=, =+RUSAGE-THREAD=
 and returns a lisp structure =rusage=.  =utime= and =stime= is converted
