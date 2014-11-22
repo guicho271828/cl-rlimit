@@ -65,6 +65,10 @@
    (nvcsw "ru_nvcsw" :type :long)
    (nivcsw "ru_nivcsw" :type :long))
 
+(constant (+RUSAGE-SELF+ "RUSAGE_SELF"))
+(constant (+RUSAGE-CHILDREN+ "RUSAGE_CHILDREN"))
+(constant (+RUSAGE-THREAD+ "RUSAGE_THREAD"))
+
 (include "errno.h")
 
 (constant (+EFAULT+ "EFAULT"))

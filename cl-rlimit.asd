@@ -9,4 +9,5 @@
             :components
             ((:file :packages)
              (:cffi-grovel-file :grovel)
-             (:file :rlimit)))))
+             (:file :rlimit)
+             (:file :rusage)))))
