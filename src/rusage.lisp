@@ -5,10 +5,6 @@
   (who :int)
   (rusage :pointer))
 
-(cffi:defcfun (%setrusage "setrusage") :int
-  (who :int)
-  (rusage :pointer))
-
 ;; (cstruct rusage "struct rusage"
 ;;    (utime "ru_utime" :type (:struct timeval))
 ;;    (stime "ru_stime" :type (:struct timeval))
