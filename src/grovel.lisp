@@ -40,8 +40,8 @@
 (ctype rlimit-type "rlim_t")
 
 (cstruct rlimit "struct rlimit"
- (current "rlim_cur" :type :unsigned-long-long) ;;  "the current (soft) limit"
- (max "rlim_max" :type :unsigned-long-long)) ;;"the hard limit"
+ (current "rlim_cur" :type rlimit-type) ;;  "the current (soft) limit"
+ (max "rlim_max" :type rlimit-type)) ;;"the hard limit"
 
 (cstruct timeval "struct timeval"
    (sec "tv_sec" :type :long)
