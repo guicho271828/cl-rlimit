@@ -24,7 +24,7 @@ matrix:
     - env: LISP=ecl
     - env: LISP=sbcl32
     - env: LISP=ccl32
-    - env: LISP=ccl
+    # - env: LISP=ccl
     - env: LISP=clisp32
 
 # either use a local install.sh script or install it via curl. Feel
