@@ -46,5 +46,5 @@ before_script:
   - echo "(defsystem :dummy-cl-travis-system)" > ~/lisp/dummy-cl-travis-system.asd
 
 script:
-  - cl --eval '(ql:quickload :cl-rlimit)'
+  - cl --eval '(progn (ql:quickload :cffi-grovel) (ql:quickload :cl-rlimit))'
  
